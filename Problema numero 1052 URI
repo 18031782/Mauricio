@@ -1,0 +1,49 @@
+ public static void main(String[] args) { 
+ //Introducimos un scanner para la entrada de un numero entre el 1 y 12
+     System.out.println("Introduzca un numero (1-12) :");
+ int N;
+  Scanner input =new Scanner(System.in);
+  switch (N =input.nextInt()) {
+  //Se define cada caso en el cual el mes es representado por el caso asi como su salida correspondiente
+  case 1:
+   System.out.print("El mes es : Enero\n");
+   break;
+  case 2:
+   System.out.print("El mes es : Febrero\n");
+   break;
+  case 3:
+   System.out.print("El mes es : Marzo\n");
+   break;
+  case 4:
+   System.out.print("El mes es : Abril\n");
+   break;
+  case 5:
+   System.out.print("El mes es : Mayo\n");
+   break;
+  case 6:
+   System.out.print("El mes es : Junio\n");
+   break;
+  case 7:
+   System.out.print("El mes es : Julio\n");
+   break;
+  case 8:
+   System.out.print("El mes es : Agosto\n");
+   break;
+  case 9:
+   System.out.print("El mes es : Septiembre\n");
+   break;
+  case 10:
+   System.out.print("El mes es : Octubre\n");
+   break;
+  case 11:
+   System.out.print("El mes es : Noviembre\n");
+   break;
+  case 12:
+   System.out.print("El mes es : Diciembre\n");
+   break;
+
+  default:
+   break;
+  }
+ 
+    }
