@@ -1,0 +1,46 @@
+package incrementosalario;
+
+import java.util.Scanner;
+
+public class IncrementoSalario {
+
+ public static void main(String[] args) {
+ System.out.println("Introduzca el salario actual:");
+ //Definimos nuestras variables
+ float N,nuevo_salario = 0,earn_Money = 0;
+ int porcentaje = 0;
+ //Se utiliza un scanner para la entrada del salario
+  Scanner input =new Scanner(System.in);
+  N =input.nextFloat();
+  //Definimos los rangos de salario y su porcentaje segun lo que gana el empleado  
+  if (N >= 0 && N <= 400.00) {
+   porcentaje = 15;
+   nuevo_salario = (float) (N + (N * (porcentaje /100.00)));
+   earn_Money = (float) ((N * (porcentaje /100.00)));
+   
+  }else if (N >= 400.01 && N <= 800.00) {
+   porcentaje = 12;
+   nuevo_salario = (float) (N + (N * (porcentaje /100.00)));
+   earn_Money = (float) ((N * (porcentaje /100.00)));
+  }else if (N >= 800.01 && N <= 1200.00) {
+   porcentaje = 10;
+   nuevo_salario = (float) (N + (N * (porcentaje /100.00)));
+   earn_Money = (float) ((N * (porcentaje /100.00)));
+   
+  }else if (N >= 1200.01 && N <= 2000.00) {
+   porcentaje = 7;
+   nuevo_salario = (float) (N + (N * (porcentaje /100.00)));
+   earn_Money = (float) ((N * (porcentaje /100.00)));
+  }else if (N >= 2000.01) {
+   porcentaje = 4;
+   nuevo_salario = (float) (N + (N * (porcentaje /100.00)));
+   earn_Money = (float) ((N * (porcentaje /100.00)));
+  }
+  //Definimos las salidas para cada caso
+  System.out.printf("Nuevo salario: %.2f\n",nuevo_salario);
+  System.out.printf("Dinero ganado: %.2f\n",earn_Money);
+  System.out.print("Porcentaje: "+porcentaje+" %\n");
+
+
+    }
+    }
