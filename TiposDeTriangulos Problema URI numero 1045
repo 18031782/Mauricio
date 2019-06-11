@@ -1,0 +1,47 @@
+public static void main(String[] args) { 
+     System.out.println("Introduzca los lados del triangulo ej: 7.0, 5.0, 7.0");
+ //Se definen las variables y añadimos un scanner
+    double A, B, C;
+    
+  Scanner input =new Scanner(System.in);
+  A = input.nextDouble();
+  B = input.nextDouble();
+  C = input.nextDouble();
+  double tempA = Math.max(A, Math.max(B, C));
+  double tempB = 0;
+  double tempC = 0;
+  
+  if (tempA == A) {
+   tempB =Math.max(B, C);
+   tempC =Math.min(B, C);
+  }
+  if (tempA == B) {
+   tempB =Math.max(A, C);
+   tempC =Math.min(A, C);
+  }
+  if (tempA == C) {
+   tempB =Math.max(B, A);
+   tempC =Math.min(B, A);
+  }
+  //-------Definimos las salidas-----------------------
+  if (tempA >= (tempB + tempC)) {
+   System.out.print("No forma ningun triangulo\n");
+   
+  }else if (tempA*tempA > ((tempB*tempB)+(tempC*tempC))) {
+   System.out.print("Triangulo obtusangulo\n");
+  }
+  if (tempA*tempA == ((tempB*tempB)+(tempC*tempC))) {
+   System.out.print("Triangulo rectangulo\n");
+  }
+
+  if (tempA*tempA < ((tempB*tempB)+(tempC*tempC))) {
+   System.out.print("Triangulo acutangulo\n");
+  }
+  if ((tempA == tempB) &&(tempA == tempC)) {
+   System.out.print("Triangulo equilatero\n");
+  }
+  if (((tempA == tempB) &&(tempA != tempC)) || ((tempA == tempC) &&(tempA != tempB)) || ((tempB == tempC) &&(tempB != tempA)) ) {
+   System.out.print("Triangulo isoseles\n");
+  }
+ 
+    }
